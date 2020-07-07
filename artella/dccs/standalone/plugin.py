@@ -14,8 +14,17 @@ from artella.core.utils import Singleton
 
 class ArtellaStandalonePlugin(dccplugin.ArtellaDccPlugin, object):
 
-    def init(self, dev=False):
-        super(ArtellaStandalonePlugin, self).init(dev=dev)
+    def init(self, dev=False, show_dialogs=True):
+        """
+        Initializes Artella DCC plugin
+
+        :param bool dev: Whether plugin is initialized in development mode or not
+        :param bool show_dialogs: Whether dialogs should appear during plugin initialization or not
+        :return: True if the initialization was successful; False otherwise
+        :rtype: bool
+        """
+
+        super(ArtellaStandalonePlugin, self).init(dev=dev, show_dialogs=show_dialogs)
 
 
 @Singleton
