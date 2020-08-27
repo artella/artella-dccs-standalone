@@ -130,6 +130,16 @@ def pass_message_to_main_thread_fn():
     return None
 
 
+def eval_deferred(fn):
+    """
+    Evaluates given function in deferred mode
+
+    :param fn: function
+    """
+
+    return fn()
+
+
 def clean_path(file_path):
     """
     Cleans given path so it can be properly used by current DCC
