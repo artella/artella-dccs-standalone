@@ -14,13 +14,15 @@ from artella.core.utils import Singleton
 
 class ArtellaStandalonePlugin(dccplugin.ArtellaDccPlugin, object):
 
-    def init(self, dev=False, show_dialogs=True):
+    def init(self, dev=False, show_dialogs=True, create_menu=True, create_callbacks=True, *args, **kwargs):
         """
         Initializes Artella DCC plugin
 
         :param bool dev: Whether plugin is initialized in development mode or not
         :param bool show_dialogs: Whether dialogs should appear during plugin initialization or not
-        :return: True if the initialization was successful; False otherwise
+        :param bool create_menu: Whether menu should be created or not
+        :param bool create_callbacks: Whether or not DCC callbacks should be created
+        :return: True if the initialization was successful; False otherwise.
         :rtype: bool
         """
 
