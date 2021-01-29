@@ -40,7 +40,7 @@ def extensions():
     :rtype: list(str)
     """
 
-    return ['.ma', '*.mb', 'readme.txt']
+    return ['readme.txt']
 
 
 def scene_name():
